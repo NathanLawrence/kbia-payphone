@@ -37,7 +37,7 @@ gulp.task('html', function(){
 
 // This task will only work for KBIA.
 gulp.task('upload', shell.task([
-	'aws s3 cp build s3://apps.kbia.org/uncertain-road --recursive --profile kbia'
+	'aws s3 cp build s3://apps.kbia.org/putting-payphone-to-rest --recursive --profile kbia'
 ]));
 
 gulp.task('build', ['img','less', 'js', 'html']);

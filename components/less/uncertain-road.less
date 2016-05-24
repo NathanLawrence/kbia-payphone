@@ -6,10 +6,12 @@ header.title-card{
 	color: #eee;
 	background-color: #888;
 
-	background-image: url("../img/william-cover.jpg");
+	background-image: url("../img/payphone-cover.jpg");
     background-size : cover;
     background-position: center;
     background-blend-mode: multiply;
+
+    margin-bottom:2em;
 
 
 
@@ -21,28 +23,54 @@ header.title-card{
 
 		font-kerning: normal;
 
+		@media screen and (max-width: @screen-md){
+			transform:translateY(-60%);
+		}
 
 
 
 		h1{
-			font-size:6.5em;
+		
+			font-size:5em;
 			margin-top:0px;
 			padding-top:5%;
 
+			.fade-in-page-load(1s,0s);
 
 			span.respace{
 				letter-spacing: 0.05em;
 			}
+
+			@media screen and (max-width: @screen-sm){
+				padding-top:2em;
+				font-size: 3em;
+			}
 		}
 
 		h2{
+
+			.fade-in-page-load(1s,0s); 
+
 			margin-top:0px;
 			font-size:3em;
 		}
 
+		h2.special-project-label{
+			font-weight:100;
+
+			@media screen and (max-width: @screen-sm){
+				font-size:1.5em;
+				pading-top:1em;
+			}
+		}
+
 		h2.author{
-			margin-top: 2em;
 			font-size: 2.5em;
+
+			@media screen and (max-width: @screen-sm){
+				font-size:1.5em;
+				pading-top:1em;
+			}
 		}
 	}
 
@@ -53,6 +81,10 @@ header.title-card{
 		padding-right:3em;
 		padding-bottom:3em;
 		width:300px;
+
+		@media screen and (max-width: @screen-md){
+			.hidden;
+		}
 	}
 	img.logo-left{
 		position:absolute;
@@ -80,11 +112,23 @@ body{
 
 		h1{
 			.container;
+
+			padding-top: 1em;
+			padding-bottom: 0.5em;
 			font-size: 3em;
+			font-weight: bold;
+
+			&:after{
+				width:80px;
+				padding-top:12px;
+    			border-bottom:4px solid @brand-primary;
+			}
 		}
 
 		h2{
 			.container;
+
+
 			font-size: 2.2em;
 			padding-top: 1em;
 			padding-bottom: 0.5em;
@@ -94,6 +138,19 @@ body{
 			.container;
 		}
 
+		.disclaimer{
+			font-style:italic;
+		}
+
+		img.full-across{
+			padding-top:1em;
+			padding-bottom: 5px;
+			width:100%;
+		}
+
+		p.caption.full-across{
+			text-align:right;
+		}
 
 	}
 
@@ -112,7 +169,7 @@ progress{
 	top:0;
 
 	width:100%;
-	height:5px;
+	height:8px;
 
 
 	-webkit-appearance: none;
