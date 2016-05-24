@@ -4,7 +4,7 @@ header.title-card{
 	text-align: center;
 
 	color: #eee;
-	background-color: #888;
+	background-color: #eee;
 
 	background-image: url("../img/payphone-cover.jpg");
     background-size : cover;
@@ -19,7 +19,7 @@ header.title-card{
 		.container;
 		position:relative;
 		top:50%;
-		transform:translateY(-70%);
+		transform:translateY(-60%);
 
 		font-kerning: normal;
 
@@ -30,6 +30,8 @@ header.title-card{
 
 
 		h1{
+
+			text-shadow: 1px 1px 30px #222;
 		
 			font-size:5em;
 			margin-top:0px;
@@ -104,7 +106,7 @@ body{
 
 .article{
 
-	margin-bottom:10em;
+	margin-bottom:3em;
 
 	section{
 
@@ -112,6 +114,7 @@ body{
 
 		h1{
 			.container;
+			.more-contained;
 
 			padding-top: 1em;
 			padding-bottom: 0.5em;
@@ -127,8 +130,7 @@ body{
 
 		h2{
 			.container;
-
-
+			.more-contained;
 			font-size: 2.2em;
 			padding-top: 1em;
 			padding-bottom: 0.5em;
@@ -136,6 +138,9 @@ body{
 
 		p{
 			.container;
+			.more-contained;
+
+
 		}
 
 		.disclaimer{
@@ -156,44 +161,29 @@ body{
 
 }
 
+.more-contained{
+	padding-left:100px;
+	padding-right:100px;
 
-//Cool reading progress bar to replace a normal scrollbar.
-::-webkit-scrollbar
-{
-    width: 0px;
+	@media screen and (max-width: @screen-md){
+		padding-left:15px;
+		padding-right:15px;
+	}
 }
 
-progress{
-	position: fixed;
-	left:0;
-	top:0;
-
-	width:100%;
-	height:8px;
-
-
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance:none;
-	border:none;
-
-	background-color:transparent;
-
-	color: @brand-primary;
-	z-index:5;
+div.boxy-callout{
+	margin-bottom:2em;
+	margin-right:3em;
+	padding-bottom:1em;
 }
 
-progress::-webkit-progress-bar {
-  background-color: transparent;
-  z-index:5;
+div.boxy-callout-narrow{
+	width:100px;
 }
 
-progress::-webkit-progress-value {
-  background-color: @brand-primary;
-  z-index:5;
+div.callout-room-ghost{
+	margin-top:1em;
+	padding-bottom:2em;
 }
 
-progress::-moz-progress-bar {
-  background-color: @brand-primary;
-  z-index:5;
-}
+
